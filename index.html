@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern digital business card — connect, discover, and share easily. Built with Node.js, Firebase, HTML, CSS, and Tailwind CSS." />
+  <meta name="keywords" content="digital business card, portfolio, personal brand, modern card, Firebase, Tailwind CSS" />
+  <meta name="author" content="Your Name" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="My Digital Business Card" />
+  <meta property="og:description" content="Tap to connect — a modern interactive digital business card." />
+  <meta property="og:image" content="assets/bg.jpg" />
+  <meta property="og:type" content="website" />
+  
+  <title>My Digital Business Card</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/bg.jpg" type="image/jpg" />
+</head>
+
+<body class="relative min-h-screen flex flex-col text-white">
+
+  <!-- Navbar -->
+  <nav class="relative z-10 flex items-center justify-between px-4 py-3 backdrop-blur-md bg-white/10">
+    <h1 class="text-2xl font-bold tracking-wide"><img src="assets/mycard.png" alt="My Card Logo"></h1>
+
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none" aria-label="Toggle navigation menu" title="Toggle navigation menu">
+      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      </svg>
+      <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <ul id="nav-links" class="hidden md:flex gap-8 text-lg">
+      <li><a href="#about" class="hover:text-yellow-400 transition click-btn">About</a></li>
+      <li><a href="#contact" class="hover:text-yellow-400 transition click-btn">Contact</a></li>
+      <li><a href="#socials" class="hover:text-yellow-400 transition click-btn">Socials</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="relative z-10 flex flex-col items-center justify-center flex-grow px-6 py-10 md:px-10">
+    <div id="card" class="relative w-full max-w-sm p-6 rounded-2xl backdrop-blur-md bg-white/10 shadow-2xl border border-white/20 transform transition duration-500 hover:scale-105 hover:rotate-1 hover:shadow-3xl">
+      <div class="text-center">
+        <img src="assets/profile.jpg" alt="Profile" class="w-28 h-28 mx-auto rounded-full border-4 border-white shadow-lg" />
+        <h2 class="text-2xl font-semibold mt-4">Solomon Owusu</h2>
+        <p class="text-sm text-gray-200">Web Developer | Designer | Creator</p>
+
+        <div class="mt-4 space-y-2 text-sm md:text-base">
+          <p>📞 +1 (233) 540-890-7812</p>
+          <p>✉️ wiseking328@gmail.com</p>
+          <p>🌍 <a href="www.wisekingcreative.com">www.wisekingcreative.com</a></p>
+        </div>
+
+        <div class="flex justify-center gap-4 mt-5 flex-wrap">
+          <a href="#" class="social-link bg-blue-600 hover:bg-blue-700 p-3 rounded-full" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link bg-pink-500 hover:bg-pink-600 p-3 rounded-full" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link bg-sky-500 hover:bg-sky-600 p-3 rounded-full" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link bg-gray-800 hover:bg-gray-900 p-3 rounded-full" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+
+        <button id="download-btn" class="mt-6 px-6 py-2 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-500 transition click-btn">
+           Download Card (JPG)
+          </button>
+
+
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 text-center py-4 text-xs md:text-sm bg-white/10 backdrop-blur-md">
+    © <span id="year"></span> Solomon Owusu. All rights reserved.
+  </footer> 
+
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+   <script src="script.js"></script>
+
+</body>
+</html>
