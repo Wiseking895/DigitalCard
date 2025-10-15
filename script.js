@@ -2,8 +2,8 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Sounds
-const hoverSound = new Audio('assets/hover-sound.mp3');
-const clickSound = new Audio('assets/click-sound.mp3');
+const hoverSound = new Audio('assets/sound2.mp3');
+const clickSound = new Audio('assets/mouse-click.mp3');
 
 // Background hover sound
 const card = document.getElementById('card');
